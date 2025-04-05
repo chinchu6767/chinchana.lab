@@ -1,18 +1,13 @@
 import numpy as np
 
-matrix_A = np.random.randint(1, 11, size=(3, 3))
-matrix_B = np.random.randint(1, 11, size=(3, 3))
+matrix1 = np.random.randint(1, 11, (3, 3))
+matrix2 = np.random.randint(1, 11, (3, 3))
 
-print("Matrix A:")
-print(matrix_A)
+subtraction = matrix1 - matrix2
 
-print("\nMatrix B:")
-print(matrix_B)
+division = matrix1 / matrix2
 
-matrix_subtraction = np.subtract(matrix_A, matrix_B)
-print("\nMatrix Subtraction (A - B):")
-print(matrix_subtraction)
-
-matrix_division = np.divide(matrix_A, matrix_B, out=np.zeros_like(matrix_A, dtype=float), where=matrix_B!=0)
-print("\nElement-wise Division (A / B):")
-print(matrix_division)
+print("Matrix 1:\n", matrix1)
+print("Matrix 2:\n", matrix2)
+print("Subtraction (Matrix1 - Matrix2):\n", subtraction)
+print("Element-wise Division (Matrix1 / Matrix2):\n", division)
